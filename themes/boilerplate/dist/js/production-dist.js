@@ -12,5 +12,12 @@ $(document).ready(function(){
 	// add all of your code within here, not above or below
 	$(function() {
     });
+    $(document).ready(function(){
+        $(".burgermenu").click(function(){
+          $(".mobilemenu").animate({
+            height: 'toggle'
+          });
+        });
+      });
 
 });

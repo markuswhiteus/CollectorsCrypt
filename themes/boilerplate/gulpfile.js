@@ -73,7 +73,7 @@ gulp.task('watch', () => {
 **************************/
 gulp.task('serve', () => {
     browserSync.init({
-    proxy: `wordpress.coswold.co.uk`,
+    proxy: `https://test.local`,
     files: `**/*`,
     ghostMode : false
   })
