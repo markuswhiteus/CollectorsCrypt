@@ -66,7 +66,7 @@
             <div class="w-8 h-0.5 bg-gray-600"></div>
         </div>
     </div>
-    <div class="w-full flex items-center text-center md:hidden">
+    <div class="w-full flex items-center text-center md:hidden -mt-2">
         <div class="mobilemenu mx-auto w-full hidden">
             <?php  	
                 wp_nav_menu( 
