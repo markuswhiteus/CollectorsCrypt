@@ -19,6 +19,8 @@
 <body <?php body_class(); ?>>
 	<div class="wrapper font-montserrat">
 
-		<header class="flex bg-white pt-1">
-
+		<header class="">
+			<?php
+			    include locate_template('parts/hero.php');
+			?>
 		</header>

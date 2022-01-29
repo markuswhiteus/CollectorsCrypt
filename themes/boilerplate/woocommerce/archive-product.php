@@ -18,7 +18,6 @@
 defined( 'ABSPATH' ) || exit;
 
 get_header();
-include locate_template('parts/hero.php');
 /**
  * Hook: woocommerce_before_main_content.
  *

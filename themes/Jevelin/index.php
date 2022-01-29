@@ -1,6 +1,5 @@
 <?php
     get_header();
-    include locate_template('parts/hero.php');
 ?>
 
 	<main class="site-content">

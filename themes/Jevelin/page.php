@@ -1,6 +1,5 @@
 <?php
     get_header();
-    include locate_template('parts/hero.php');
 ?>
 
 	<main class="container p-4 md:p-8 lg:px-0 lg:flex flex-wrap flex-grow">
