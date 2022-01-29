@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;700&display=swap');
+
+body {
+    @apply font-sans antialiased text-primary leading-relaxed;
+    font-family: 'Roboto Slab', serif;
+}
+
+.container {
+    @apply w-full mx-auto px-4;
+}
+
+@screen xl {
+    .container {
+        @apply px-20;
+    }
+}
+
+.navmenu {
+    @apply flex flex-row;
+
+    ul {
+        @apply flex;
+    }
+}
+
+.woocommerce-tabs {
+    display: none;
+}
+
+.woocommerce div.product div.images.woocommerce-product-gallery {
+    opacity: 100 !important;
+    @apply flex;
+}
+
+.product {
+    @apply flex flex-row gap-8;
+
+}
+
+.woocommerce-breadcrumb {
+    @apply mb-12;
+}
