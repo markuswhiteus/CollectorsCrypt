@@ -5,4 +5,4 @@
 	// add all of your code within here, not above or below
 	$(function() {
   });
-});
+})(jQuery);

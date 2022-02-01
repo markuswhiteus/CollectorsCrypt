@@ -186,8 +186,8 @@
 					<h2 class="text-xs md:sm">The Collectors Crypt - Theme by Coswold</h2>
 			</div>
 	</footer>
-
-
-
+<?php
+wp_footer();
+?>
 </body>
 </html>
