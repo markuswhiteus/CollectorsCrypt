@@ -14,13 +14,3 @@
     });
   });
 })(jQuery);
-
-// jQuery(document).ready(function(){
-//     console.log('Ready');
-//     jQuery(".burgermenu").click(function(){
-//         console.log('Click');
-//       jQuery(".mobilemenu").animate({
-//         height: 'toggle'
-//       });
-//     });
-//   });

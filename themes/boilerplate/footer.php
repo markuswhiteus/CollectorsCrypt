@@ -1,4 +1,4 @@
-<footer class="container flex flex-col mt-10 p-4 md:text-center md:p-8 lg:px-0 lg:text-left md:text-sm border-t">
+<footer class="flex flex-col mt-10 p-4 md:text-center md:p-8 lg:px-0 lg:text-left md:text-sm border-t">
 		<div class="container pt-20">
 			<div class="flex flex-col gap-10">
 				<div class="flex flex-col md:flex-row gap-6 pb-12">

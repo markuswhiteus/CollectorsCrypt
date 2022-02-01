@@ -71,13 +71,19 @@ function my_remove_description_tab( $tabs ) {
  */
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 add_theme_support( 'wc-product-gallery-zoom' );
-add_theme_support( 'wc-product-gallery-lightbox' );
+// add_theme_support( 'wc-product-gallery-lightbox' );
 add_theme_support( 'wc-product-gallery-slider' );
 
 add_filter( 'woocommerce_enqueue_styles', 'jk_dequeue_styles' );
 function jk_dequeue_styles( $enqueue_styles ) {
-	// unset( $enqueue_styles['woocommerce-general'] );	// Remove the gloss
-	unset( $enqueue_styles['woocommerce-layout'] );		// Remove the layout
-	// unset( $enqueue_styles['woocommerce-smallscreen'] );	// Remove the smallscreen optimisation
+	unset( $enqueue_styles['woocommerce-general'] );	// Remove the gloss
+	// unset( $enqueue_styles['woocommerce-layout'] );		// Remove the layout
+	unset( $enqueue_styles['woocommerce-smallscreen'] );	// Remove the smallscreen optimisation
 	return $enqueue_styles;
+}
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 10 );
+add_action( 'after_setup_theme', 'my_remove_product_result_count', 99 );
+function my_remove_product_result_count() { 
+    remove_action( 'woocommerce_before_shop_loop' , 'woocommerce_result_count', 20 );
+    remove_action( 'woocommerce_after_shop_loop' , 'woocommerce_result_count', 20 );
 }

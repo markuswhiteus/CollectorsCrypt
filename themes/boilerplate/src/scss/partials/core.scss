@@ -27,10 +27,6 @@ body {
     display: none;
 }
 
-.woocommerce div.product div.images.woocommerce-product-gallery {
-    opacity: 100 !important;
-    @apply flex;
-}
 
 .product {
     @apply flex flex-row gap-8;
@@ -39,4 +35,13 @@ body {
 
 .woocommerce-breadcrumb {
     @apply mb-12;
+}
+
+.woocommerce-ordering {
+    display: none;
+  }
+
+.columns-4{
+    columns: 1;
+    @apply flex flex-row flex-wrap;
 }
