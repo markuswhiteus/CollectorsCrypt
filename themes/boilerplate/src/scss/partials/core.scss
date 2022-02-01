@@ -45,3 +45,11 @@ body {
     columns: 1;
     @apply flex flex-row flex-wrap;
 }
+
+.woocommerce-products-header{
+    @apply items-center text-center mb-5;
+}
+
+.onsale{
+    @apply hidden;
+}

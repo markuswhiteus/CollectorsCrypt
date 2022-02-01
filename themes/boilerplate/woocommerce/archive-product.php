@@ -18,7 +18,7 @@
 defined( 'ABSPATH' ) || exit;
 get_header();
 ?>
-<section class="container test">
+<section class="container">
 <?php
 /**
  * Hook: woocommerce_before_main_content.
@@ -45,6 +45,8 @@ do_action( 'woocommerce_before_main_content' );
 	do_action( 'woocommerce_archive_description' );
 	?>
 </header>
+<div class="flex flex-col items-center md:items-start md:flex-row">
+<div class="sidebar">	
 <?php
 /**
  * Hook: woocommerce_sidebar.
@@ -53,6 +55,7 @@ do_action( 'woocommerce_before_main_content' );
  */
 do_action( 'woocommerce_sidebar' );
 ?>
+</div>
 <div class="container">
 <?php
 if ( woocommerce_product_loop() ) {
