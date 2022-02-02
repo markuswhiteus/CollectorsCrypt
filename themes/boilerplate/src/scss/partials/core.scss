@@ -14,6 +14,9 @@ body {
         @apply px-20;
     }
 }
+input{
+    @apply  bg-gray-100;
+}
 
 .navmenu {
     @apply flex flex-row;
@@ -52,4 +55,37 @@ body {
 
 .onsale{
     @apply hidden;
+}
+
+.woocommerce-products-header__title{
+    display:none;
+}
+.woocommerce-product-gallery{
+    @apply mx-auto 
+}
+.flex-control-nav{
+    @apply flex flex-row;
+}
+.flex-viewport{
+    height:400px!important;
+}
+.product-details{
+    @apply flex flex-col gap-8;
+}
+.cart-form{
+    @apply flex flex-col gap-4 mr-auto items-center;
+    @media (min-width:900px) {
+        @apply flex-row gap-8;     
+    }
+    .single_add_to_cart_button.button{
+    @apply mr-auto;
+    }
+}
+
+.single-product .product .single_add_to_cart_button.button{
+    @apply px-6;
+    padding-top: 8px;
+    padding-bottom: 9px;
+	background-color: #333333;
+	color: #FFFFFF;
 }
