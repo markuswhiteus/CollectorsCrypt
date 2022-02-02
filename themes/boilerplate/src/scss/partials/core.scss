@@ -89,3 +89,6 @@ input{
 	background-color: #333333;
 	color: #FFFFFF;
 }
+.entry-title{
+    @apply font-bold text-xl;
+}
