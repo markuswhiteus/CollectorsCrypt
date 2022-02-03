@@ -6,7 +6,7 @@
                     <li><i class="fas fa-search fa-xl"></i></li>
                     <li><a href="<?php echo get_permalink( wc_get_page_id( 'myaccount' ) ); ?>"><i class="fas fa-user fa-xl"></a></i></li>
                     <li class="flex items-center gap-0.5">
-                        <a href="<?php echo wc_get_cart_url() ?>">
+                        <a href="<?php echo get_permalink( wc_get_page_id( 'cart' ) ) ?>">
                             <i class="fas fa-shopping-cart fa-xl cart-icon"></i>
                             <span class="text-white text-xs bg-black rounded-full p-0.5 px-1">
                             <?php echo WC()->cart->get_cart_contents_count(); ?>

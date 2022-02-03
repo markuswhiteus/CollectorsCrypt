@@ -24,7 +24,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 ?>
-<li class="w-full md:w-1/5 flex flex-col relative m-4">
+<li class="w-full md:w-1/4 flex flex-col relative p-4 mt-auto">
 	<?php
 	/**
 	 * Hook: woocommerce_before_shop_loop_item.

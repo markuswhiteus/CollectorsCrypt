@@ -87,3 +87,46 @@ function my_remove_product_result_count() {
     remove_action( 'woocommerce_before_shop_loop' , 'woocommerce_result_count', 20 );
     remove_action( 'woocommerce_after_shop_loop' , 'woocommerce_result_count', 20 );
 }
+function desktop_register_widgets_init() {
+  register_sidebar( array(
+      'name'          => __( 'Main Sidebar', 'textdomain' ),
+      'id'            => 'sidebar-1',
+      'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'textdomain' ),
+      'before_widget' => '<li id="%1$s" class="widget %2$s">',
+      'after_widget'  => '</li>',
+      'before_title'  => '<h2 class="widgettitle">',
+      'after_title'   => '</h2>',
+  ) );
+}
+add_action( 'widgets_init', 'desktop_register_widgets_init' );
+
+remove_filter( 'woocommerce_before_shop_loop_item', 'woocommerce_template_loop_product_link_open', 10);
+
+function woocommerce_template_loop_product_link_open_custom() {
+  global $product;
+
+  $link = apply_filters( 'woocommerce_loop_product_link', get_the_permalink(), $product );
+
+  echo '<a href="' . esc_url( $link ) . '" class="product-block woocommerce-LoopProduct-link woocommerce-loop-product__link">';
+}
+
+add_filter( 'woocommerce_before_shop_loop_item', 'woocommerce_template_loop_product_link_open_custom', 10);
+
+add_action('wp_footer', function() {
+  ?>
+  <script>
+      window.addEventListener('load', (e) => {
+          document.querySelectorAll('.woof_container_inner h4').forEach(function (h) {
+              if (h.querySelector('a.woof_front_toggle')) {
+                  h.style.cursor = 'pointer';
+                  h.addEventListener('click', function (e) {
+                      h.querySelector('a.woof_front_toggle').click();
+                      return false;
+                  });
+
+              }
+          });
+      });
+  </script>
+  <?php
+});
