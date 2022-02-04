@@ -18,7 +18,7 @@
 defined( 'ABSPATH' ) || exit;
 
 do_action( 'woocommerce_before_cart' ); ?>
-<div class="flex flex-row">
+<div class="flex flex-col md:flex-row">
 	<form class="woocommerce-cart-form w-2/3" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 		<?php do_action( 'woocommerce_before_cart_table' ); ?>
 
@@ -161,7 +161,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 	<?php do_action( 'woocommerce_before_cart_collaterals' ); ?>
 
-	<div class="w-1/3 text-right">
+	<div class="w-1/3 flex justify-center">
 		<?php
 			/**
 			 * Cart collaterals hook.
