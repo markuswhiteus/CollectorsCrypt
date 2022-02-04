@@ -114,7 +114,7 @@ input{
     }
 }
 .sidebar{
-    @apply mx-4;
+    @apply mx-4 w-1/4;
 }
 .woof_is_closed{
     background-image: url("/assets/filter_plus.png");
@@ -134,7 +134,10 @@ input{
         margin: 0 auto;
     }
 }
+.woof_container_inner h4 {
+    @apply flex gap-4;
+}
 table {
     border-collapse: separate;
     border-spacing: 0 15px;
-  }
+}
