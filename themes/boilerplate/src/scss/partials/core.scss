@@ -90,7 +90,7 @@ input{
 }
 .add_to_cart_button{
     margin-top: 8px;
-    width: 30%;
+    width: 32%;
     padding-top: 4px;
     padding-bottom: 5px;
     padding-left: 4px;
@@ -98,6 +98,27 @@ input{
 	background-color: #333333;
 	color: #FFFFFF;
 } 
+.woocommerce-pagination{
+    @apply mt-8 text-xl;
+    .page-numbers {
+        li {
+            @apply mx-2;
+            .page-numbers{
+                @apply rounded-lg;
+                padding-top: 2px;
+                padding-bottom: 3px;
+                padding-left: 4px;
+                padding-right: 4px;
+                background-color: #333333;
+                color: #FFFFFF;
+            }
+            .current{
+                background-color: #ededed;
+                color: black;
+            }
+        }
+    }
+}
 .entry-title{
     @apply font-bold text-xl;
 }
@@ -140,4 +161,7 @@ input{
 table {
     border-collapse: separate;
     border-spacing: 0 15px;
+}
+.cart-collaterals{
+    @apply w-1/3;
 }
