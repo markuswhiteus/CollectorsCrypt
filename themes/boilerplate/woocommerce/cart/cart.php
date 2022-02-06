@@ -161,7 +161,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 	<?php do_action( 'woocommerce_before_cart_collaterals' ); ?>
 
-	<div class="w-1/3 flex justify-center">
+	<div class="w-1/3 flex justify-center text-left ml-auto mt-6 md:mt-0">
 		<?php
 			/**
 			 * Cart collaterals hook.

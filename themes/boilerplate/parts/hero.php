@@ -18,7 +18,7 @@
         </div>
         <div class="border-b-2 ">
             <div class="container">
-                <div class="flex flex-row mx-auto justify-between items-center">
+                <div class="flex flex-row mx-auto justify-between items-center text-center">
                     <div class="">
                         <?php
                             wp_nav_menu( array( 
