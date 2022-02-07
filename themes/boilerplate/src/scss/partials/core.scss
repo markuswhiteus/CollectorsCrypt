@@ -207,3 +207,18 @@ article{
 .cart_totals{
     @apply flex flex-col;
 }
+.woocommerce-checkout-review-order-table{
+    @apply w-3/4;
+    th{
+        @apply mb-4;
+    }
+    .product-name{
+        @apply text-center;
+    }
+}
+.place-order{
+    @apply invisible;
+}
+.woocommerce-checkout-payment{
+    @apply invisible;
+}
