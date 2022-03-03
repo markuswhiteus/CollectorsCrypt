@@ -8,12 +8,6 @@ if( !function_exists( 'wqpmb_locate_template' ) ){
      * @return type Template
      */
     function wqpmb_locate_template( $template, $template_name, $template_path ){
-
-        if( $template_name !== 'global/quantity-input.php' ){
-            return $template;
-        }
-        
-       
         $option_key = WQPMB_Button::$option['option'];
         $datas = get_option( $option_key, false );
 		
@@ -97,18 +91,28 @@ if( !function_exists( 'wqpmb_locate_template' ) ){
 }
 
 if( !function_exists( 'wqpmb_admin_body_class' ) ){
+    
     /**
      * set class for Admin Body tag
      * 
      * @param type $classes
      * @return String
+     * 
+     * Fully fixed
+     * @author Saiful Islam <codersaiful@gmail.com>
+     * Fixed by Saiful at V1.1.0.0
      */
-    function wqpmb_admin_body_class(){
+    function wqpmb_admin_body_class( $class ){
         global $current_screen;
         if( isset( $current_screen->id ) && $current_screen->id == 'ultraaddons_page_' . WQPMB_MENU_SLUG ){
-            return ' ultraaddons ' . WQPMB_MENU_SLUG . ' ';
+            if( is_array( $class ) ){
+                $class[] = 'ultraaddons';
+                $class[] = WQPMB_MENU_SLUG;
+                return $class;
+            }
+            return  ' ultraaddons ' . WQPMB_MENU_SLUG . ' ';
         }
-        return '';
+        return $class;
     }
     add_filter( 'admin_body_class', 'wqpmb_admin_body_class' );
 }
@@ -163,6 +167,22 @@ if( !function_exists( 'wqpmb_submit_form' ) ){
         }
     }
     add_filter( 'wqpmb_save_data', 'wqpmb_form_submit' );
+}
+
+if( !function_exists( 'wqpmb_button_off_in_minicart' ) ){
+    
+    /**
+     * Disable our qty button from other place where global $product is not available
+     *
+     * @param bool $bool
+     * @return bool
+     */
+    function wqpmb_button_off_in_minicart( $bool ){
+        global $product;
+        if(is_null($product)) return false;
+        return $bool;
+    }
+    //add_filter( 'wqpmb_template_on_off', 'wqpmb_button_off_in_minicart' ); //currently disable
 }
 
 if( !function_exists( 'wqpmb_header_css' ) ){
